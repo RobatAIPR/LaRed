@@ -49,8 +49,24 @@ html {
 
 body {
 	margin: 0;
+	background: #fff; /* Fallback for when there is no custom background color defined. */
+	background-image: url(img/sembg.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: white;
+	font-family: 'Source Sans Pro',Sans-Serif;
+	font-size: 15px;
+}
+@media only screen and (max-width: 767px) {
+  body {
+    /* Tiny BG file for Mobile*/
+	background-image: url(img/sembgmobile.jpg);
+  }
 }
 
+#content{margin-top: 80px;}
 article,
 aside,
 details,
@@ -84,14 +100,6 @@ template {
 	display: none;
 }
 
-a {
-	background-color: transparent;
-}
-
-a:active,
-a:hover {
-	outline: 0;
-}
 
 abbr[title] {
 	border-bottom: 1px dotted;
@@ -104,11 +112,6 @@ strong {
 
 dfn {
 	font-style: italic;
-}
-
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
 }
 
 mark {
@@ -278,8 +281,12 @@ h4,
 h5,
 h6 {
 	clear: both;
+	color: white;
 }
-
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
 p {
 	margin-bottom: 1.5em;
 }
@@ -336,6 +343,22 @@ big {
 	font-size: 125%;
 }
 
+
+/*-------------------------------------------
+## Links
+-------------------------------------------*/
+a {
+	background-color: transparent;
+	text-decoration: none;
+	color: white;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+a:visited{color: #cccccc;}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -347,10 +370,6 @@ html {
 *:before,
 *:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
-}
-
-body {
-	background: #fff; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote:before,
@@ -485,30 +504,33 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Links
---------------------------------------------------------------*/
-a {
-	color: royalblue;
+.main-navigation{
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    height:70px;
+	background-color: rgba(204, 204, 204, 0.4);
+    border: none;
+    z-index: 20;
 }
-
-a:visited {
-	color: purple;
+.menu-main-container{
+	float: right;
+	margin-right: 10%;
 }
-
-a:hover,
-a:focus,
-a:active {
-	color: midnightblue;
+ul#primary-menu{
+	text-align: justify;
 }
-
-a:focus {
-	outline: thin dotted;
+ul#primary-menu li{
+    display: inline-block;
+    min-height: 70px;
+    margin-right: 10px;
+    padding: 40px 2px 2px 2px;
 }
-
-a:hover,
-a:active {
-	outline: 0;
+.header-logo{
+	display: inline;
+	width:45;
+	height:70px;
 }
 
 /*--------------------------------------------------------------
@@ -531,6 +553,7 @@ a:active {
 .main-navigation li {
 	float: left;
 	position: relative;
+	font-weight: bold;
 }
 
 .main-navigation a {
@@ -726,6 +749,13 @@ a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+
+/*--------------------------------
+# Home Page/Página de Inicio
+--------------------------------*/
+
+
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
