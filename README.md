@@ -2,10 +2,8 @@ La Red Latinoamericana
 Developed by: AIPR as Technical Secretariat to the Network 
 Will be found at [domain.tld](http://redlatinoamericana.org).
 
-## Technology
-* WordPress
-* _s Framework
-* JS frameworks, e.g. jQuery
+## WordPress Theme with Underscores.me Starter
+
 
 ## Contact
 ### Rob Scharf
