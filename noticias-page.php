@@ -31,13 +31,13 @@ get_header();
 
 			?>
 
-				 <h3><?php echo date('F Y', strtotime( $month ) ); ?></h3>
-		      <ul>
+		      <ul class="post-list">
 		          <li class="post-item">
 		            <a href="<?php the_permalink(); ?>">
 		              <div class="entry">
-		                <h4><?php the_title(); ?></h4>
-		                <?php the_excerpt(); ?>
+		              	  <h3><?php echo get_the_title( $ID ); ?></h3><br/>
+				 		  <h4><?php echo date('D F Y', strtotime( $month ) ); ?></h4>
+				 		  <?php the_excerpt(); ?>
 		              </div>
 		            </a>
 		          </li>
