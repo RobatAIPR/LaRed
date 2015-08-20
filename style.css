@@ -327,7 +327,7 @@ big {
 	font-size: 125%;
 }
 footer{
-	font-size: .9em;
+	font-size: .7em;
 	font-weight: bold;
 }
 /*-------------------------------------------
@@ -428,12 +428,14 @@ html {
 body {
 	margin: 0 0 60px; /* bottom = footer height */
 	background: #fff; /* Fallback for when there is no custom background color defined. */
+	color: white;
+}
+body.home{
 	background-image: url(img/sembg.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	color: white;
 }
 @media only screen and (max-width: 767px) {
   body {
@@ -448,8 +450,8 @@ header{
 
 #content{
 	min-height: 500px;
-	width: 90%;
-	margin: 2em 5%;
+	width: 70%;
+	margin: 2em 15%;
 }
 
 footer{
@@ -458,7 +460,7 @@ footer{
     bottom: 0;
     height: 60px;
     width: 100%;
-    background-color:#00436E;
+    background-color:#002C48;
     padding:20px;
    }
 
@@ -776,12 +778,13 @@ textarea {
 # Home Page/Página de Inicio
 --------------------------------*/
 .megatron{
-	width: 95%;
-	margin: 2em auto 2em 30%;
+	width: 100%;
+	margin: 2em auto 2em 0;
 }
 h1.welcome-text{
-	font-size: 4em;
+	font-size: 5em;
 	line-height: 1.5em;
+	padding:0;
 }
 
 
@@ -824,7 +827,7 @@ h1.entry-title{
 /*-----------------------------------------
 ## Page with Sidebar
 -----------------------------------------*/
-.content-area{
+.split-content-area{
 	float: left;
 	width: 65%;
 	margin-right: 5%;
