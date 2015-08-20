@@ -437,13 +437,17 @@ body {
 	margin: 0 0 60px; /* bottom = footer height */
 	background: #fff; /* Fallback for when there is no custom background color defined. */
 	color: #333;
-}
-body.home{
-	background-image: url(img/sembg.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	background-size: contain;
+}
+body.home{
+	background-image: url(img/sembg.jpg);
 	background-size: cover;
+}
+body,body.page-id-6{
+	background-image: url(img/mapbg.png);
 }
 @media only screen and (max-width: 767px) {
   body {
@@ -471,7 +475,7 @@ footer{
     bottom: 0;
     height: 60px;
     width: 100%;
-    background-color:#005288;
+	background-color:rgba(64,153,212,1);
     padding:20px;
     color: white;
    }
@@ -485,7 +489,7 @@ footer{
 	height:70px;
 	position: fixed;
 	left: 50px;
-	top: 50px;
+	top: 20px;
 }
 .main-navigation{
 	display: inline;
@@ -493,12 +497,14 @@ footer{
     height:70px;
     border: none;
     z-index: 20;
+
 }
 .menu-main-container{
 	position: relative;
     top: 30px;
 	float: right;
 	background-color:rgba(204,204,204, 0.8);
+	margin-right: 50px;
 
 }
 .main-navigation {
