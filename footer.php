@@ -11,8 +11,6 @@
 
 ?>
 
-
-
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			© 2015 La Red Latinoamericana para la Prevención del Genocidio y Atrocidades Masivas			
