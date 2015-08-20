@@ -445,6 +445,8 @@ header{
 
 #content{
 	min-height: 500px;
+	width: 90%;
+	margin: 2em 5%;
 }
 
 footer{
@@ -811,6 +813,10 @@ h1.welcome-text{
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+h1.entry-title{
+	font-size: 4em;
 }
 
 /*--------------------------------------------------------------
