@@ -11,15 +11,15 @@
 
 ?>
 
-	</div><!-- #content -->
+
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'lared' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'lared' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'lared' ), 'lared', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			© 2015 La Red Latinoamericana para la Prevención del Genocidio y Atrocidades Masivas			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
+
+</div><!-- #content -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
