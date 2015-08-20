@@ -270,6 +270,7 @@ h2{
 }
 h4{
 	line-height: 1.6em;
+	padding: 2px 4px 2px 0;
 }
 p {
 	margin-bottom: 1.5em;
@@ -336,14 +337,14 @@ footer{
 a {
 	background-color: transparent;
 	text-decoration: none;
-	color: white;
+	color: #005288;
 }
 
 a:active,
 a:hover {
 	outline: 0;
 }
-a:visited{color: #cccccc;}
+a:visited{color: #ffffff;}
 
 /*--------------------------------------------------------------
 # Elements
@@ -428,7 +429,7 @@ html {
 body {
 	margin: 0 0 60px; /* bottom = footer height */
 	background: #fff; /* Fallback for when there is no custom background color defined. */
-	color: white;
+	color: #333;
 }
 body.home{
 	background-image: url(img/sembg.jpg);
@@ -460,8 +461,9 @@ footer{
     bottom: 0;
     height: 60px;
     width: 100%;
-    background-color:#002C48;
+    background-color:#005288;
     padding:20px;
+    color: white;
    }
 
 
@@ -472,20 +474,22 @@ footer{
 	width:45px;
 	height:70px;
 	position: fixed;
-	left: 20px;
-	top: 20px;
+	left: 50px;
+	top: 50px;
 }
 .main-navigation{
 	display: inline;
-    position: relative;
-    top: 20px;
     text-align: center;
     height:70px;
     border: none;
     z-index: 20;
 }
 .menu-main-container{
+	position: relative;
+    top: 30px;
 	float: right;
+	background-color:rgba(204,204,204, 0.8);
+
 }
 .main-navigation {
 }
@@ -500,28 +504,33 @@ footer{
 .main-navigation li {
 	float: left;
 	position: relative;
-	font-size: 1.2em;
+	font-size: 1em;
 	font-weight: bold;
 	display: inline-block;
-	margin-top: 20px;
-	margin-right: 5px;
-    padding: 2px;
-    background-color: rgba(64,153,212,0.8);
+	padding: 5px;
+	border-right:1px solid #999;
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	padding: 5px;
+	color: #005288;
 }
-
+.main-navigation li:hover {
+    background-color: rgba(64,153,212,0.8);	
+}
 .main-navigation ul ul {
 	float: left;
 	position: absolute;
-	top: .5em;
+	top: 40px;
 	left: -999em;
 	z-index: 99999;
 }
-
+ul.sub-menu li{
+	font-size: 1em;
+	background:rgba(204,204,204, 0.8);
+}
 .main-navigation ul ul ul {
 	left: -999em;
 	top: 0;
