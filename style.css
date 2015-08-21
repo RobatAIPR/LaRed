@@ -289,8 +289,66 @@ i {
 	font-style: italic;
 }
 
-blockquote {
-	margin: 0 1.5em;
+blockquote{
+  width: 90%;	
+  display:block;
+  background: #fff;
+  padding: 5px 10px 5px 25px;
+  margin: 30px auto;
+  position: relative;
+  
+  /*Font*/
+  line-height: 1.2;
+  color: #666;
+  text-align: justify;
+  
+  /*Borders - (Optional)*/
+  border-left: 15px solid rgba(64,153,212,0.8);
+  
+  /*Box Shadow - (Optional)*/
+  -moz-box-shadow: 2px 2px 15px #ccc;
+  -webkit-box-shadow: 2px 2px 15px #ccc;
+  box-shadow: 2px 2px 15px #ccc;
+}
+
+blockquote p{
+	font-size: 1.05em;
+}
+
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+  
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+  
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:5px;
+}
+
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+blockquote a{
+  text-decoration: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #c76c0c;
+}
+
+blockquote a:hover{
+ color: #666;
+}
+
+blockquote em{
+  font-style: italic;
 }
 
 address {
@@ -337,6 +395,17 @@ footer{
 	font-size: .7em;
 	font-weight: bold;
 }
+
+/** Colors **/
+.dred{color:#9E0B0F;}
+.dblue{color:#005288;}
+
+/** Clear Fix **/
+.clearfix{clear:both;}
+/** Bold **/
+.bold{font-weight: 600;}
+/** Inline **/
+.inline{display: inline;}
 /*-------------------------------------------
 ## Links
 -------------------------------------------*/
@@ -443,11 +512,11 @@ body {
 	background-attachment: fixed;
 	background-size: contain;
 }
-body.home{
+/*body.home{
 	background-image: url(img/sembg.png);
 	background-size: cover;
-}
-body,body.page-id-6{
+}*/
+body{
 	background-image: url(img/mapbg.png);
 	background-position: right;
 }
@@ -527,6 +596,9 @@ footer{
 	display: inline-block;
 	padding: 5px;
 	border-right:1px solid #999;
+}
+.main-navigation li:last-child{
+	border-right:none;
 }
 
 .main-navigation a {
@@ -737,12 +809,14 @@ textarea {
 	display: inline;
 	float: left;
 	margin-right: 1.5em;
+	margin-bottom: 1em;
 }
 
 .alignright {
 	display: inline;
 	float: right;
 	margin-left: 1.5em;
+	margin-bottom: 1em;
 }
 
 .aligncenter {
@@ -833,8 +907,12 @@ textarea {
 	margin: 0 0 1.5em;
 }
 
+.entry-header{
+	height: inherit;
+}
 h1.entry-title{
 	font-size: 4em;
+	line-height: 1.5;
 }
 
 
@@ -852,9 +930,9 @@ h1.welcome-text{
 }
 
 
-/*-----------------------------------------
-## Page with Sidebar
------------------------------------------*/
+/*--------------------------------
+# Page w/ Sidebar
+--------------------------------*/
 .split-content-area{
 	float: left;
 	width: 65%;
@@ -888,18 +966,41 @@ aside li{
 ## Noticias
 -----------------------------------------*/
 ul.post-list{
-	list-style: none;
+	list-style-type: none;
+	clear: both;
+	background-color: rgba(204,204,204, 0.6);
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	margin-top: 40px;
+	padding-left:0;
+}
+.post-navigation{
+	display: none;
+}
+/*-----------------------------------------
+## Seminarios Lemkin // Iniciativas Nacionales
+-----------------------------------------*/
+ul.lemkin-list, ul.iniciativas-list{
+	font-size: 1.2em;
 	list-style-type: none;
 }
-
-/*-----------------------------------------
-## Seminarios Lemkin
------------------------------------------*/
-ul.lemkin-list a{
-	font-size: 1.2em;
-}
-ul.lemkin-list li{
+ul.lemkin-list li, ul.iniciativas-list li{
 	margin-bottom: 1em;
+}
+/*-----------------------------------------
+## Protagonistas 
+-----------------------------------------*/
+ul.protagonista-list li{
+	list-style-type: none;
+	clear: both;
+	background-color: rgba(204,204,204, 0.6);
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	margin-top: 40px;
+}
+ul.protagonista-list img{
+	float: left;
+	max-width: 75px;
 }
 /*--------------------------------------------------------------
 ## Comments

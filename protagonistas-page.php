@@ -1,7 +1,7 @@
 <?php
 /*
- * Template name: Noticias y Eventos
- * The template for displaying News and Events.
+ * Template name: Protagonistas
+ * The template for displaying Protagonistas en la Prevención
  */
 
 get_header(); 
@@ -17,7 +17,7 @@ get_header();
 
 			// WP_Query arguments
 			$args = array (
-				'post_type'              => array( 'noticias' ),
+				'post_type'              => array( 'protagonista' ),
 			);
 
 			// The Query
@@ -30,10 +30,15 @@ get_header();
 
 			?>
 
-		      <ul class="post-list">
+		      <ul class="protagonista-list">
 		          <li class="post-item">
 		              <div class="entry">
-		              	  	  <a href="<?php the_permalink(); ?>"><h3><?php echo get_the_title( $ID ); ?></h3></a><br/>
+		              	<?php if ( has_post_thumbnail() ) : ?>
+							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+							<?php the_post_thumbnail('thumbnail'); ?>
+							</a>
+						<?php endif; ?>
+              	  	  <a href="<?php the_permalink(); ?>"><h3><?php echo get_the_title( $ID ); ?></h3></a><br/>
 				 		  <h4><?php echo the_time('j \d\e\ F \d\e\l\ Y'); ?></h4>
 				 		  <?php the_excerpt(); ?>
 		              </div>

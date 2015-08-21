@@ -14,10 +14,10 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
-			<?php lared_posted_on(); ?>
+			<?php //lared_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
-
+	<div class="clearfix"></div>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php

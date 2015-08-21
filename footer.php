@@ -13,7 +13,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			© 2015 La Red Latinoamericana para la Prevención del Genocidio y Atrocidades Masivas			
+			© 2015 La Red Latinoamericana para la Prevención del Genocidio y Atrocidades Masivas / © 2015 The Latin American Network for Genocide and Mass Atrocity Prevention		
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 
