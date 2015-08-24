@@ -704,8 +704,8 @@ ul.sub-menu li{
 	width: 50%;
 }
 
-.current_page_item{
-	background-color: #999;
+.current-menu-item, .current-menu-parent{
+	background-color: #999 !important;
 }
 /*--------------------------------------------------------------
 # Forms
