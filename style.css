@@ -504,7 +504,7 @@ html {
 }
 
 body {
-	margin: 0 0 20px; /* bottom = footer height */
+	margin: 0 0 48px; /* bottom = footer height */
 	background: #fff; /* Fallback for when there is no custom background color defined. */
 	color: #333;
 	background-position: center center;
@@ -522,8 +522,7 @@ body{
 }
 @media only screen and (max-width: 767px) {
   body {
-    /* Tiny BG file for Mobile*/
-	background-image: url(img/sembgmobile.jpg);
+    /* Tiny BG file for Mobile */
   }
 }
 
@@ -536,6 +535,12 @@ header{
 	width: 70%;
 	margin: 2em 15%;
 }
+@media only screen and (max-width: 767px) {
+	#content{
+		width: 90%;
+		margin: 5em 5%;
+	}
+}
 #main{
 	margin-bottom: 50px;
 }
@@ -544,13 +549,16 @@ footer{
 	position: absolute;
    	left: 0;
     bottom: 0;
-    height: 20px;
+    height: 48px;
     width: 100%;
     padding:5px 20px;
     color: #333;
 	background-color:rgba(204,204,204, 0.7);
    }
-
+@media only screen and (max-width: 767px) {
+	footer{
+	}
+}
 
 /*--------------------------------------------------------------
 # Navigation
@@ -561,6 +569,11 @@ footer{
 	position: fixed;
 	left: 50px;
 	top: 20px;
+}
+@media only screen and (max-width: 767px) {
+	.header-logo{
+	position: absolute;
+	}
 }
 .main-navigation{
 	display: inline;
@@ -574,13 +587,9 @@ footer{
 	position: relative;
     top: 30px;
 	float: right;
-
 	margin-right: 50px;
-
 }
 .main-navigation {
-}
-ul#primary-menu{
 }
 .main-navigation ul {
 	display: none;
@@ -593,15 +602,14 @@ ul#primary-menu{
 .main-navigation li {
 	float: left;
 	position: relative;
-	font-size: 1em;
+	font-size: 1.1em;
 	font-weight: bold;
 	padding: 5px;
 	border-right:1px solid #999;
-	background-color:rgba(204,204,204, 0.7);
+	background-color:rgba(204,204,204, 0.6);
 }
 .main-navigation li:last-child{
 	border-right:0;
-
 }
 
 .main-navigation a {
@@ -613,19 +621,44 @@ ul#primary-menu{
 .main-navigation li:hover {
 	background:rgba(204,204,204, 1);
 }
+
+@media only screen and (max-width: 767px) {
+	.menu-main-container{
+		margin-right:0;
+		top: 120px;
+		height: 200px;
+		width: 100%;
+	}
+	ul#primary-menu{width: 100%;}
+	.main-navigation li {
+		width: 60%;
+		margin: auto 20%;
+		height: 2.5em;
+		border:0;
+	}
+	.main-navigation li a{
+		font-size: 1.4em;
+		padding: 4px 0;
+	}
+}
+
 .main-navigation ul ul {
 	float: left;
 	position: absolute;
-	top: 40px;
+	top: 38px;
 	left: -999em;
 	z-index: 99999;
 	border: none;
-	background-color:rgba(204,204,204, 0.7);
+	background-color:rgba(204,204,204, 0.6);
 }
+
 ul.sub-menu li{
 	font-size: 1em;
-	background:rgba(204,204,204, 0.8);
+	background-color:rgba(204,204,204, 0.8);
 	border: none;
+}
+ul.sub-menu a{
+	font-size: 0.8em;
 }
 .main-navigation ul ul ul {
 	left: -999em;
@@ -633,7 +666,7 @@ ul.sub-menu li{
 }
 
 .main-navigation ul ul a {
-	min-width: 100px;
+	width: 180px;
 }
 
 .main-navigation ul ul li {
@@ -668,19 +701,26 @@ ul.sub-menu li{
 }
 
 /* Small menu. */
-.menu-toggle,
+.menu-toggle{
+	float: right;
+    right: 40px;
+    top: 30px;
+    color:rgba(64,153,212,0.8); 
+    position: absolute;
+}
 .main-navigation.toggled ul {
 	display: block;
 }
-
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 767px) {
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
 		display: block;
+		width: 100%;
 	}
 }
+
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,
@@ -949,10 +989,18 @@ h1.welcome-text{
 	margin-right: 5%;
 }
 .widget-area{
-	float:right;
+	position: fixed;
+	right:5%;
 	width: 20%;
 	background-color: rgba(204,204,204, 0.6);
 	padding: 10px;
+}
+@media only screen and (max-width: 767px) {
+	.widget-area{
+		float: right;
+		position: relative;
+		width: 100%;
+	}
 }
 /*-----------------------------------------
 ## Asides

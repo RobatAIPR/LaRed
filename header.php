@@ -15,6 +15,8 @@
 
 <!-- Define Google Webfont -->
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,700,900,300italic' rel='stylesheet' type='text/css'>
+<!-- Font Awesome! -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,7 +32,9 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lared' ); ?></a>
 	<header id="masthead" class="site-header" role="banner">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lared' ); ?></button>
+		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+		<i class="fa fa-bars fa-3x"></i>
+		</button>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
