@@ -574,18 +574,20 @@ footer{
 	position: relative;
     top: 30px;
 	float: right;
-	background-color:rgba(204,204,204, 0.7);
+
 	margin-right: 50px;
 
 }
 .main-navigation {
 }
-
+ul#primary-menu{
+}
 .main-navigation ul {
 	display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	background-color:rgba(64,153,212,0.8);
 }
 
 .main-navigation li {
@@ -593,12 +595,13 @@ footer{
 	position: relative;
 	font-size: 1em;
 	font-weight: bold;
-	display: inline-block;
 	padding: 5px;
 	border-right:1px solid #999;
+	background-color:rgba(204,204,204, 0.7);
 }
 .main-navigation li:last-child{
-	border-right:none;
+	border-right:0;
+
 }
 
 .main-navigation a {
@@ -616,10 +619,13 @@ footer{
 	top: 40px;
 	left: -999em;
 	z-index: 99999;
+	border: none;
+	background-color:rgba(204,204,204, 0.7);
 }
 ul.sub-menu li{
 	font-size: 1em;
 	background:rgba(204,204,204, 0.8);
+	border: none;
 }
 .main-navigation ul ul ul {
 	left: -999em;
@@ -696,6 +702,10 @@ ul.sub-menu li{
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+.current_page_item{
+	background-color: #999;
 }
 /*--------------------------------------------------------------
 # Forms
