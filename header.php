@@ -33,7 +33,8 @@
 	<header id="masthead" class="site-header" role="banner">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-		<i class="fa fa-bars fa-3x"></i>
+		<!-- <i class="fa fa-bars fa-3x"></i> -->
+		<i class="fa fa-hand-pointer-o fa-4x"></i>
 		</button>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>

@@ -531,7 +531,7 @@ header{
 }
 
 #content{
-	min-height: 600px;
+	min-height: 400px;
 	width: 70%;
 	margin: 2em 15%;
 }
@@ -603,7 +603,7 @@ footer{
 	position: relative;
 	font-size: 1.1em;
 	font-weight: bold;
-	padding: 5px;
+	padding: 10px;
 	border-right:1px solid #999;
 	background-color:rgba(204,204,204, 0.6);
 }
@@ -614,7 +614,6 @@ footer{
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-	padding: 5px;
 	color: #005288;
 }
 .main-navigation li:hover {
@@ -639,7 +638,6 @@ footer{
 	}
 	.main-navigation li a{
 		font-size: 1.4em;
-		padding: 5px 0;
 		margin: auto 0;
 	}
 }
@@ -721,8 +719,9 @@ ul.sub-menu a{
 	float: right;
     right: 40px;
     top: 30px;
-    color:rgba(64,153,212,0.8); 
+    color: rgba(0, 82, 136, 1);
     position: absolute;
+ 	text-shadow: none;
 }
 .main-navigation.toggled ul {
 	display: block;
@@ -981,21 +980,31 @@ h1.entry-title{
 	font-size: 4em;
 	line-height: 1.5;
 }
+@media only screen and (max-width: 767px) {
+    h1.entry-title{font-size: 2em;line-height: 1.5em;}
+}
 
-
+.wp-post-image{
+	float: left;
+	margin:16px 16px 16px 0;
+}
 /*--------------------------------
 # Home Page/Página de Inicio
 --------------------------------*/
 .megatron{
-	width: 100%;
-	margin: 2em auto 2em 5%;
+	width: 95%;
+	margin: 0 auto;
 }
 h1.welcome-text{
-	font-size: 5em;
-	line-height: 1.5em;
-	padding:0;
+	font-size: 3em;
+	line-height: 1.4em;
 }
-
+.soliloquy-container{
+	margin: 1em auto !important;
+}
+@media only screen and (max-width: 767px) {
+	h1.welcome-text{font-size:2em;}
+}
 
 /*--------------------------------
 # Page w/ Sidebar
@@ -1013,12 +1022,17 @@ h1.welcome-text{
 	padding: 10px;
 }
 @media only screen and (max-width: 767px) {
+	.split-content-area{
+		width: 100%;
+		margin-right:0;
+	}
 	.widget-area{
 		width: 100%;
 		float: right;
 		position: relative;
 		right: 0;
 		padding:20px;
+		margin-bottom:25px;
 	}
 }
 /*-----------------------------------------

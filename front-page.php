@@ -16,8 +16,15 @@ get_header(); ?>
 					La Red Latinoamericana para la Prevención del Genocidio y Atrocidades Masivas
 				</h1>
 			</div><!-- megatron -->
+
+
+	<?php while ( have_posts() ) : the_post();
+		get_template_part( 'template-parts/content', 'front' );
+	endwhile; ?>
+	
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
 
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>
