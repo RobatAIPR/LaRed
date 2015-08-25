@@ -530,9 +530,6 @@ header{
 	height: 100px;
 }
 
-@media only screen and (max-width: 767px) {
-}
-
 #content{
 	min-height: 600px;
 	width: 70%;
@@ -541,7 +538,7 @@ header{
 @media only screen and (max-width: 767px) {
 	#content{
 		width: 90%;
-		margin: 5em 5%;
+		margin: 1em 5%;
 	}
 }
 #main{
@@ -599,7 +596,6 @@ footer{
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
-	background-color:rgba(64,153,212,0.8);
 }
 
 .main-navigation li {
@@ -629,13 +625,15 @@ footer{
 	.menu-main-container{
 		margin-right:0;
 		top: 120px;
-		height: 50px;
 		width: 100%;
 	}
-	ul#primary-menu{width: 100%;}
+	ul#primary-menu{
+		width: 100%;		
+		min-height: 365px;
+	}
 	.main-navigation li {
-		width: 40%;
-		margin: auto 5%;
+		width: 60%;
+		margin: auto 20%;
 		height: 2.5em;
 		border:0;
 	}
@@ -649,12 +647,11 @@ footer{
 .main-navigation ul ul {
 	float: left;
 	position: absolute;
-	top: 38px;
+	top: 41px;
 	left: -999em;
 	z-index: 99999;
 	border: none;
 	background-color:rgba(204,204,204, 0.6);
-	text-align: right;
 }
 
 ul.sub-menu li{
@@ -679,7 +676,7 @@ ul.sub-menu a{
 }
 @media only screen and (max-width: 767px) {
 	.main-navigation ul ul {
-		width: 50%;
+		width: 100%;
 	}
 	ul.sub-menu{text-align: center;}
 	ul.sub-menu li {
@@ -706,7 +703,6 @@ ul.sub-menu a{
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
 	left: 0;
-	position: relative;
 }
 
 .main-navigation ul ul li:hover > ul,
@@ -729,7 +725,6 @@ ul.sub-menu a{
 }
 .main-navigation.toggled ul {
 	display: block;
-	position: relative;
 }
 @media screen and (min-width: 767px) {
 	.menu-toggle {
@@ -1009,7 +1004,8 @@ h1.welcome-text{
 	margin-right: 5%;
 }
 .widget-area{
-	float:right;
+    position: fixed;
+    right: 10%;
 	width: 20%;
 	background-color: rgba(204,204,204, 0.6);
 	padding: 10px;
@@ -1017,6 +1013,10 @@ h1.welcome-text{
 @media only screen and (max-width: 767px) {
 	.widget-area{
 		width: 100%;
+		float: right;
+		position: relative;
+		right: 0;
+		padding:20px;
 	}
 }
 /*-----------------------------------------
