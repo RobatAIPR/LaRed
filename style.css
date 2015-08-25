@@ -632,8 +632,8 @@ footer{
 		min-height: 365px;
 	}
 	.main-navigation li {
-		width: 60%;
-		margin: auto 20%;
+		width: 80%;
+		margin: auto 10%;
 		height: 2.5em;
 		border:0;
 	}
@@ -703,6 +703,7 @@ ul.sub-menu a{
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
 	left: 0;
+	top: 41px;
 }
 
 .main-navigation ul ul li:hover > ul,
@@ -734,6 +735,7 @@ ul.sub-menu a{
 		display: block;
 		width: 100%;
 	}
+	.main-navigation ul li.focus > ul {left: 0;top: 176px;}
 }
 
 
